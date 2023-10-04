@@ -7,10 +7,23 @@
 
     //ENTRADA
 
-    
+    const popInicial = 80000;
+    const popDesejada = 200000;
+    const taxaCrescAtual = 0.03; // 3%
+
     //PROCESSAMENTO
 
-    
+    let anos = 0;
+    let popAtual = popInicial;
+
+
+    while (popAtual < popDesejada) {
+        popAtual += popAtual * taxaCrescAtual;
+        anos++;
+    }
+
     //SAÍDA
+
+    alert(`Sera preciso ${anos} anos pra que a população chegue á ${popDesejada} habitantes.`);
 
 </script>

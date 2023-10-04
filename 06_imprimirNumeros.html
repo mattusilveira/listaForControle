@@ -17,15 +17,17 @@
         for (let numero = numInicial; numero <= numFinal; numero++) {
             if (numero % 2 === 0) {
                 numPares.push(numero);
-            } else {
+            }
+            else {
                 numImpares.push(numero);
             }
         }
 
-        //SAÍDA
+
         alert("Pares entre " + numInicial + " e " + numFinal + ": " + numPares.join(", "));
         alert("Ímpares entre " + numInicial + " e " + numFinal + ": " + numImpares.join(", "));
-    } else {
+    }
+    else {
         alert("Erro: O número ínicial tem que ser menor do que o número final!");
     }
 

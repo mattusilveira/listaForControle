@@ -6,6 +6,27 @@
     */
 
     //ENTRADA
+    const popInicial = 50000;
+        const taxaCrescAnual = 0.015; 
+
+
+    const prazoAnos5 = 5;
+        const prazoAnos10 = 10;
+
+    let pop5Anos = popInicial;
+        for (let anos = 1; anos <= prazoAnos; anos++) {
+    pop5Anos += pop5Anos * taxaCrescAnual;
+}
+
+
+    let pop10Anos = popInicial;
+        for (let anos = 1; anos <= prazoAnos10; anos++) {
+    pop10Anos += pop10Anos * taxaCrescAnual;
+}
+
+
+    alert(`População prevista em ${prazoAnos} anos: ${pop5Anos.toFixed(0)} habitantes`);
+    alert(`População prevista em ${prazoAnos10} anos: ${populacao10Anos.toFixed(0)} habitantes`);
 
     
     //PROCESSAMENTO

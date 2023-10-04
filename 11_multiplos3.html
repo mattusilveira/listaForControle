@@ -6,10 +6,19 @@
 
     //ENTRADA
 
+    let soma = 0;
 
     //PROCESSAMENTO
 
+    for (let num = 1; num <= 100; num++) {
+        if (num % 3 === 0) {
+            console.log(num);
+            soma += num;
+        }
+    }
 
     //SAÍDA
+
+    alert(`A soma dos múltiplos de três(3) entre um(1) e cem(100) é: ${soma}`);
 
 </script>

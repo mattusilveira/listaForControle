@@ -7,10 +7,31 @@
 
     //ENTRADA
 
+    let soma = 0;
+    let contador = 0;
 
     //PROCESSAMENTO
 
+    for (let i = 0; i < 5; i++) {
+        const num = parseFloat(prompt(`Digite o ${i + 1}º número:`));
+
+
+        if (!isNaN(num)) {
+            soma += num;
+            contador++;
+        } else {
+            alert("Insira um número válido.");
+            i--;
+        }
+    }
+
+
+    const media = soma / contador;
 
     //SAÍDA
+
+    alert(`A soma dos números: ${soma}`);
+    alert(`A média dos números: ${media}`);
+
 
 </script>

@@ -8,11 +8,50 @@
     */
 
     //ENTRADA
+    const candidato1 = prompt("Informe o nome do primeiro candidato:");
+        const candidato2 = prompt("Informe o nome do segundo candidato:");
+            const candidato3 = prompt("Informe o nome do terceiro candidato:");
 
+
+    const qntVotantes = parseInt(prompt("Informe a quantidade de alunos votantes:"));
+
+
+    let votosCandidato1 = 0;
+        let votosCandidato2 = 0;
+            let votosCandidato3 = 0;
 
     //PROCESSAMENTO
 
+    for (let i = 0; i < qntVotantes; i++) {
+        const voto = parseInt(prompt(`Aluno ${i + 1}, escolha o seu candidato:\n1. ${candidato1}\n2. ${candidato2}\n3. ${candidato3}`));
+
+        switch (voto) {
+            case 1:
+                votosCandidato1++;
+                break;
+            case 2:
+                votosCandidato2++;
+                break;
+            case 3:
+                votosCandidato3++;
+                break;
+            default:
+                alert("Opção inválida!");
+                i--;
+        }
+    }
+
+    const totalVotos = votosCandidato1 + votosCandidato2 + votosCandidato3;
+        const porcentagemCandidato1 = (votosCandidato1 / totalVotos) * 100;
+            const porcentagemCandidato2 = (votosCandidato2 / totalVotos) * 100;
+                const porcentagemCandidato3 = (votosCandidato3 / totalVotos) * 100;
 
     //SAÍDA
+
+    alert(`Resultados:`);
+    alert(`- ${candidato1}: ${votosCandidato1} votos (${porcentagemCandidato1.toFixed(2)}%)`);
+    alert(`- ${candidato2}: ${votosCandidato2} votos (${porcentagemCandidato2.toFixed(2)}%)`);
+    alert(`- ${candidato3}: ${votosCandidato3} votos (${porcentagemCandidato3.toFixed(2)}%)`);
+    alert(`Total: ${totalVotos}`);
 
 </script>

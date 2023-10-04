@@ -5,11 +5,21 @@
     */
 
     //ENTRADA
+    const invInicial = 1000; 
+        const metaInvestimento = 2000; 
+            const taxaDiária = 0.02; 
+
+    let dias = 0;
+        let saldo = invInicial;
 
 
-    //PROCESSAMENTO
+    while (saldo < metaInvestimento) {
+        dias++;
+            saldo += saldo * taxaDiária;
+}
 
+//SAÍDA
 
-    //SAÍDA
+    alert(`Little João demorará ${dias} dias para conseguir um saldo de R$ ${metaInvestimento.toFixed(2)}.`);
 
 </script>
