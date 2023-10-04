@@ -8,10 +8,27 @@
 
     //ENTRADA
 
-    
-    //PROCESSAMENTO
 
-    
+    //PROCESSAMENTO
+    const numPrimo = parseInt(prompt(`Qual número quer validar se for número primo?`));
+    let div = 0;
+    for (let contador = 1; contador <= numPrimo; contador++) {
+        if (numPrimo % contador === 0) {
+            div = div + 2;
+            alert(`${numPrimo} dividido por ${contador}  </br>`)
+        }
+        else {
+            alert(`${numPrimo} dividido por ${contador} não divide </br>`);
+        }
+    }
+    if (div === 2) {
+        alert(`O número ${numPrimo} é um número primo, porque só é divido por um, e por ele mesmo!`);
+    }
+    else {
+        alert(`O número ${numPrimo} não é um número impar,  ${div} números.`);
+    }
+
     //SAÍDA
+
 
 </script>

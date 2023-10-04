@@ -7,10 +7,21 @@
 
     //ENTRADA
 
+    const numPrimo = parseInt(prompt("Digite um número para indentificar se ele é primo ou não:"));
 
     //PROCESSAMENTO
+    let div = 0;
 
+    for (let contador = 1; contador <= numPrimo; contador++) {
+        if (numPrimo % contador === 0) {
+            div++;
+        }
+    }
 
-    //SAÍDA
+    if (div === 2) {
+        alert(`O número ${numPrimo} é primo, pois só tem dois divisores: 1 e ${numPrimo}.`);
+    } else {
+        alert(`O número ${numPrimo} não é primo, pois tem ${div} divisores.`);
+    }
 
 </script>
